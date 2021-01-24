@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      TO-DO do Paulo
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{item.title}}
+
+      <ion-buttons end>
+        <button ion-button icon-only (click)="editItem(item)"   color="light"><ion-icon name="create" color="primary"></ion-icon></button>
+        <button ion-button icon-only (click)="viewItem(item)"   color="light"><ion-icon name="eye"    color="primary"></ion-icon></button>
+        <button ion-button icon-only (click)="deleteItem(item)" color="light"><ion-icon name="trash"  color="danger"></ion-icon></button>
+      </ion-buttons>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
